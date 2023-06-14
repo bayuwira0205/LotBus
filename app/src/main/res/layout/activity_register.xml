@@ -7,7 +7,7 @@
     android:background="@mipmap/bground"
     tools:context=".RegisterActivity">
     <TextView
-        android:id="@+id/tv_login"
+        android:id="@+id/tv_regis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_medium"
@@ -15,13 +15,13 @@
         android:textColor="@color/black"
         android:textSize="28dp"
         android:layout_marginBottom="102dp"
-        app:layout_constraintBottom_toTopOf="@+id/ly_Login"
+        app:layout_constraintBottom_toTopOf="@+id/ly_Register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         />
 
     <LinearLayout
-        android:id="@+id/ly_Login"
+        android:id="@+id/ly_Register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="54dp"
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:background="@drawable/kolom_input"
-            android:hint="password please..."
+            android:hint="Name please..."
             android:padding="12dp"
             android:textSize="14dp"
             android:textStyle="italic" />
@@ -63,7 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:background="@drawable/kolom_input"
-            android:hint="password please..."
+            android:hint="Phone Number please..."
             android:padding="12dp"
             android:textSize="14dp"
             android:textStyle="italic" />
@@ -80,7 +80,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:background="@drawable/kolom_input"
-            android:hint="password please..."
+            android:hint="Email please..."
             android:padding="12dp"
             android:textSize="14dp"
             android:textStyle="italic" />
@@ -116,9 +116,9 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="2dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="@+id/ly_Login"
-        app:layout_constraintStart_toStartOf="@+id/ly_Login">
+        app:layout_constraintBottom_toTopOf="@+id/btn_regis"
+        app:layout_constraintEnd_toEndOf="@+id/ly_Register"
+        app:layout_constraintStart_toStartOf="@+id/ly_Register">
 
         <TextView
             android:id="@+id/tv_haveAcount"
@@ -130,7 +130,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tv_Register"
+            android:id="@+id/tv_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Login"
@@ -140,12 +140,12 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_regis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="62dp"
         android:text="Register"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/ly_Login"
-        app:layout_constraintStart_toStartOf="@+id/ly_Login" />
+        app:layout_constraintEnd_toEndOf="@+id/ly_Register"
+        app:layout_constraintStart_toStartOf="@+id/ly_Register" />
 </androidx.constraintlayout.widget.ConstraintLayout>

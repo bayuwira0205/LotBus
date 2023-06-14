@@ -2,11 +2,13 @@
 
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_Kendaraan"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="15dp"
     android:layout_marginBottom="8dp"
     android:outlineSpotShadowColor="@color/black"
+    android:outlineAmbientShadowColor="@color/black"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -27,11 +29,11 @@
 
         <ImageView
             android:id="@+id/im_kendaraan"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginTop="12dp"
             android:src="@drawable/mobil"
-            android:background="@color/appBar"
+            android:background="@color/white"
             app:layout_constraintStart_toStartOf="@+id/tv_title"
             app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 
@@ -40,12 +42,12 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginLeft="16dp"
-            android:src="@drawable/settings"
+            android:src="@drawable/chair"
             app:layout_constraintStart_toEndOf="@+id/im_kendaraan"
            app:layout_constraintTop_toTopOf="@id/im_kendaraan" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/tv_kapasitas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
@@ -66,7 +68,7 @@
             android:textColor="@color/black"
             android:textSize="14dp"
             android:layout_marginTop="16dp"
-            android:background="@color/appBar"
+            android:background="@drawable/sopir_bground"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
             app:layout_constraintStart_toStartOf="@+id/im_kapasitas"
@@ -76,7 +78,7 @@
             android:id="@+id/tv_tanpaSopir"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/appBar"
+            android:background="@drawable/sopir_bground"
             android:fontFamily="@font/montserrat_medium"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
@@ -103,6 +105,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_sopir" />
 
         <TextView
+            android:id="@+id/tv_harga"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat_bold"

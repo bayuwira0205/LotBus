@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/abu"
     tools:context=".HomeFragment">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -29,27 +28,71 @@
                             android:layout_gravity="center"/>
                 </androidx.appcompat.widget.Toolbar>
 
-                <EditText
-                    android:id="@+id/et_search"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:drawableStart="@drawable/baseline_search_24"
-                    android:background="@drawable/kolom_input"
-                    android:padding="12dp"
-                    app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:id="@+id/ly_search"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="@color/appBar"
+                   android:paddingBottom="16dp"
+                   app:layout_constraintTop_toBottomOf="@+id/toolbar">
+                       <EditText
+                           android:id="@+id/et_search"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="16dp"
+                           android:layout_marginLeft="16dp"
+                           android:layout_marginRight="16dp"
+                           android:drawableStart="@drawable/baseline_search_24"
+                           android:background="@drawable/kolom_input"
+                           android:padding="16dp"
+                           app:layout_constraintTop_toTopOf="parent"
+                           />
+
+                   <EditText
+                       android:id="@+id/editText"
+                       android:layout_width="180dp"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="16dp"
+                       android:background="@drawable/lokasi_background"
+                       android:drawableStart="@drawable/location"
+                       android:drawablePadding="8dp"
+                       android:padding="8dp"
+                       android:text="Batam"
+                       app:layout_constraintStart_toStartOf="@+id/et_search"
+                       app:layout_constraintTop_toBottomOf="@id/et_search" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Urutkan"
+                       android:fontFamily="@font/montserrat_bold"
+                       android:textColor="@color/white"
+                       android:textSize="18dp"
+                       android:layout_marginRight="16dp"
+                       app:layout_constraintBottom_toBottomOf="@+id/im_sortir"
+                       app:layout_constraintEnd_toStartOf="@+id/im_sortir"
+                       app:layout_constraintTop_toTopOf="@+id/im_sortir" />
+
+                   <ImageView
+                       android:id="@+id/im_sortir"
+                       android:layout_width="32dp"
+                       android:layout_height="32dp"
+                       android:src="@drawable/sort"
+                       app:layout_constraintBottom_toBottomOf="@+id/editText"
+                       app:layout_constraintEnd_toEndOf="@+id/et_search"
+                       app:layout_constraintTop_toTopOf="@+id/editText" />
+               </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerView"
+                    android:id="@+id/rv_Kendaraan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
-                    app:layout_constraintTop_toBottomOf="@+id/et_search"
+                    app:layout_constraintTop_toBottomOf="@+id/ly_search"
                     tools:layout_editor_absoluteX="16dp"
                     tools:listitem="@layout/item_list_mobil" />
 
